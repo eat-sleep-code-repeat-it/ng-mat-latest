@@ -2,14 +2,15 @@
 
 ```bash
 
-ng test --main ./src/app/first-demo.spec.ts
+ng test --main ./src/app/utest-examples/first-demo.spec.ts
+ng test --main ./src/app/utest-examples/first-demo.spec.ts --watch=false
 
-ng test --main src/app/first-demo.spec.ts --watch=false
-test-headless
+## test-headless
 ng test --watch=false --browsers=ChromeHeadless
-test-headless for one file
-ng test --main src/app/first-demo.spec.ts --browsers=ChromeHeadless --watch=false
-ng test --main src/app/shared/models/student.spec.ts --browsers=ChromeHeadless --watch=false
+
+## test-headless for one file
+ng test --main ./src/app/utest-examples/first-demo.spec.ts --browsers=ChromeHeadless --watch=false
+ng test --main ./src/app/models/student.spec.ts --browsers=ChromeHeadless --watch=false
 ```
 
 ## Change author name and email
