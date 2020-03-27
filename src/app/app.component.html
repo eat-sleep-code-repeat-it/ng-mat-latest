@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-button (click)="gotoPage('/home')"> Home </button>
+    <button mat-button (click)="gotoPage('/test')"> Test </button>
+    <span fxFlex="100" fxLayoutAlign="center center">Second Line </span>
+    <mat-icon> favorite </mat-icon>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
