@@ -21,3 +21,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 NOTE: This will prompt you to confirm the change - select "Yes"
 
 After that you should be able to execute tns commands.
+
+## reference
+
+- [testing-angular-applications](https://github.com/testing-angular-applications/testing-angular-applications/tree/master/chapter06)
