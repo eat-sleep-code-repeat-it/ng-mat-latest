@@ -8,15 +8,18 @@ import { IContactPreference } from '../interfaces/i-contact-preference';
 })
 export class PreferencesService {
 
+  // dependency injection with constructor
   constructor(private browserStorage: BrowserStorageService ) { }
 
+  // use injected service instead of BrowserStorage
   public saveProperty(preference: IContactPreference) {
-    if (!preference.key.length) {
+    if (!(preference.key && preference.key.length)) {
       throw new Error('saveProperty requires a non-blank property name');
     }
-    this.browserStorage.setItem(preference);
+    this.browserStorage.setItem(preference.key, preference.value);
   }
 
+  // use injected service instead of BrowserStorage
   public getProperty(key: string) : any {
     return this.browserStorage.getItem(key);
   }

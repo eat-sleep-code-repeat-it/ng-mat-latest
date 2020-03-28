@@ -8,6 +8,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TestComponent } from './components/test/test.component';
 import { HomeComponent } from './components/home/home.component';
 import { DemoMaterialModule } from './modules/demo-material.module';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HttpErrorInterceptor } from './http-error.interceptor';
+import { StarWarModule } from 'projects/star-war/src/lib/star-war.module';
+
 
 @NgModule({
   declarations: [
@@ -20,9 +24,17 @@ import { DemoMaterialModule } from './modules/demo-material.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     DemoMaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule,
+    StarWarModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpErrorInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

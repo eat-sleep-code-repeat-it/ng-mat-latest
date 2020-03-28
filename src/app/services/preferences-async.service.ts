@@ -10,7 +10,7 @@ export class PreferencesAsyncService {
   constructor(private browserStorage: BrowserStorageAsyncService) { }
 
   savePropertyAsync(preference: IContactPreference) : Promise<boolean> {
-      return this.browserStorage.setItem(preference);
+      return this.browserStorage.setItem(preference.key, preference.value);
   }
 
   getPropertyAsync(key: string) : Promise<IContactPreference> {

@@ -1,4 +1,4 @@
 export interface IContactPreference {
-    key: string;
-    value: string | object;
+	key: string;
+	value: string | object;
 }

@@ -14,7 +14,23 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "star-war-lib": [
+        "dist/star-war-lib/star-war-lib",
+        "dist/star-war-lib"
+      ],
+      "my-lib": [
+        "dist/my-lib/my-lib",
+        "dist/my-lib"
+      ],
+      "star-war": [
+        "dist/star-war/star-war",
+        "dist/star-war",
+        "dist/star-war/star-war",
+        "dist/star-war"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

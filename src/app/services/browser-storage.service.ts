@@ -8,15 +8,15 @@ export class BrowserStorageService {
 
   constructor() { }
   getItem: (property: string) => string | object;
-  setItem: (preference: IContactPreference) => void;
+  setItem: (property: string, value: string | object) => void;
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class BrowserStorageAsyncService {
-
+  // stubbed class prior to implement storage
   constructor() { }
   getItem: (property: string) => Promise<IContactPreference>;
-  setItem: (preference: IContactPreference) => Promise<boolean>;
+  setItem: (property: string, value: string | object) => Promise<boolean>;
 }

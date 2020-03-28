@@ -1,5 +1,5 @@
 export interface IGoogleData {
-    id: number;
-    country: string;
-    zipCode: string;
-  }
+  id: number;
+  country: string;
+  zipCode: string;
+}

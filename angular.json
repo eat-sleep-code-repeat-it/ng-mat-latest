@@ -121,6 +121,86 @@
           }
         }
       }
+    },
+    "star-war-lib": {
+      "projectType": "library",
+      "root": "projects/star-war-lib",
+      "sourceRoot": "projects/star-war-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/star-war-lib/tsconfig.lib.json",
+            "project": "projects/star-war-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/star-war-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/star-war-lib/src/test.ts",
+            "tsConfig": "projects/star-war-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/star-war-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/star-war-lib/tsconfig.lib.json",
+              "projects/star-war-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "star-war": {
+      "projectType": "library",
+      "root": "projects/star-war",
+      "sourceRoot": "projects/star-war/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/star-war/tsconfig.lib.json",
+            "project": "projects/star-war/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/star-war/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/star-war/src/test.ts",
+            "tsConfig": "projects/star-war/tsconfig.spec.json",
+            "karmaConfig": "projects/star-war/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/star-war/tsconfig.lib.json",
+              "projects/star-war/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ng-mat-latest"
