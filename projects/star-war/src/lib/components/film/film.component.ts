@@ -27,7 +27,7 @@ export class FilmComponent implements OnInit {
   url:           string;*/
 
   displayedColumns: string[] = [
-    'title', 'episode_id','director', 'producer',  'release_date',
+    'episode_id', 'title', 'director', 'producer',  'release_date',
     'created','edited'
   ];
   dataSource: MatTableDataSource<Starship>;

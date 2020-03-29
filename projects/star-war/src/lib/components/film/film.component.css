@@ -1,0 +1,24 @@
+.mat-column-edited {
+  min-width: 100px;
+  padding-left: 20px;
+}
+.mat-column-created {
+  min-width: 100px;
+  padding-left: 20px;
+}
+.mat-column-release_date {
+  min-width: 100px;
+  padding-left: 20px;
+}
+.mat-column-title {
+  min-width: 100px;
+  padding-left: 20px;
+}
+.mat-column-producer {
+  min-width: 100px;
+  padding-left: 20px;
+}
+.mat-column-episode_id {
+  min-width: 80px;
+  padding-left: 20px;
+}
