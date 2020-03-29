@@ -1,0 +1,33 @@
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+  <ng-container matColumnDef="episode_id">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> episode_id </th>
+    <td mat-cell *matCellDef="let element"> {{element.episode_id}} </td>
+  </ng-container>
+  <ng-container matColumnDef="title">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
+    <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+  </ng-container>
+  <ng-container matColumnDef="release_date">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> release_date </th>
+    <td mat-cell *matCellDef="let element"> {{element.release_date}} </td>
+  </ng-container>
+  <ng-container matColumnDef="director">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> director </th>
+    <td mat-cell *matCellDef="let element"> {{element.director}} </td>
+  </ng-container>
+  <ng-container matColumnDef="producer">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> producer </th>
+    <td mat-cell *matCellDef="let element"> {{element.producer}} </td>
+  </ng-container>
+  <ng-container matColumnDef="created">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> created </th>
+    <td mat-cell *matCellDef="let element"> {{element.created}} </td>
+  </ng-container>
+  <ng-container matColumnDef="edited">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> edited </th>
+    <td mat-cell *matCellDef="let element"> {{element.edited}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

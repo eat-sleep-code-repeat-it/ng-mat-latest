@@ -131,6 +131,7 @@
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
+            "preserveSymlinks": true,
             "tsConfig": "projects/star-war-lib/tsconfig.lib.json",
             "project": "projects/star-war-lib/ng-package.json"
           },

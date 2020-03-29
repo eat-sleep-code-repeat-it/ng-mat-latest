@@ -1,1 +1,12 @@
-<p>home works!</p>
+<button mat-button [matMenuTriggerFor]="appMenu">Swapi</button>
+
+<mat-menu #appMenu="matMenu">
+  <button mat-menu-item  routerLink="film" routerLinkActive="active"> this.endpoints.films  </button>
+  <button mat-menu-item  routerLink="planet" routerLinkActive="active">  this.endpoints.planets  </button>
+  <button mat-menu-item  routerLink="species" routerLinkActive="active">  this.endpoints.species  </button>
+  
+  <button mat-menu-item  routerLink="vehicle" routerLinkActive="active">  this.endpoints.vehicles  </button>
+  <button mat-menu-item  routerLink="people" routerLinkActive="active">  this.endpoints.people </button>
+  <button mat-menu-item  routerLink="starship" routerLinkActive="active">  this.endpoints.starships  </button>
+</mat-menu>
+<router-outlet></router-outlet>

@@ -28,6 +28,7 @@ import { StarWarModule } from 'projects/star-war/src/lib/star-war.module';
     HttpClientModule,
     StarWarModule
   ],
+  /*
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
@@ -35,6 +36,7 @@ import { StarWarModule } from 'projects/star-war/src/lib/star-war.module';
       multi: true
     }
   ],
+  */
   bootstrap: [AppComponent]
 })
 export class AppModule { }
