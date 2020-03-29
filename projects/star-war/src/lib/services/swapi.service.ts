@@ -6,9 +6,9 @@ import { PeopleResponse } from '../models/people';
 import { IEndpoint } from '../models/endpoint';
 import { FilmResponse } from '../models/film';
 import { VehicleResponse } from '../models/vehicle';
-import { PlannetResponse } from '../models/plannet';
 import { SpeciesResponse } from '../models/species';
 import { StarshipResponse } from '../models/starship';
+import { PlanetResponse } from '../models/planet';
 
 @Injectable({
   providedIn: 'root'
@@ -35,26 +35,24 @@ export class SwapiService {
   }
   
   public getPeople(url?: string): Observable<PeopleResponse> {
-    if (!url) {
-      return this.http.get<PeopleResponse>(`${url}`);
-    }
-    return this.http.get<PeopleResponse>(`${this.swapi.planets}`);
+    let params = new HttpParams().set('format', 'json');
+    return this.http.get<PeopleResponse>(`${this.swapi.people}`, { params: params })
   }
   public getFilms(url?: string): Observable<FilmResponse> {
     let params = new HttpParams().set('format', 'json');
-    return this.http.get<StarshipResponse>(`${this.swapi.films}`, { params: params })
+    return this.http.get<FilmResponse>(`${this.swapi.films}`, { params: params })
   }
   public getVehicle(url?: string): Observable<VehicleResponse> {
     let params = new HttpParams().set('format', 'json');
-    return this.http.get<StarshipResponse>(`${this.swapi.vehicles}`, { params: params })
+    return this.http.get<VehicleResponse>(`${this.swapi.vehicles}`, { params: params })
   }
-  public getPlannet(url?: string): Observable<PlannetResponse> {
+  public getPlanet(url?: string): Observable<PlanetResponse> {
     let params = new HttpParams().set('format', 'json');
-    return this.http.get<StarshipResponse>(`${this.swapi.planets}`, { params: params })
+    return this.http.get<PlanetResponse>(`${this.swapi.planets}`, { params: params })
   }
   public getSpecies(url?: string): Observable<SpeciesResponse> {
     let params = new HttpParams().set('format', 'json');
-    return this.http.get<StarshipResponse>(`${this.swapi.species}`, { params: params })
+    return this.http.get<SpeciesResponse>(`${this.swapi.species}`, { params: params })
   }
   public getStarship(url?: string): Observable<StarshipResponse> {
     console.log('this.swapi.starships', this.swapi.starships);

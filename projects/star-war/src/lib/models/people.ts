@@ -5,22 +5,30 @@ export class PeopleResponse implements ISwapiResponse {
   count:    number;
   next:     string;
   previous: string;
-  results:  People[];
+  results:  any[];
 }
 
 export class People {
-  title:         string;
-  episode_id:    number;
-  opening_crawl: string;
-  director:      string;
-  producer:      string;
-  release_date:  string;
-  characters:    string[];  // url link
-  planets:       string[];  // url link
-  starships:     string[];  // url link
-  vehicles:      string[];  // url link
-  species:       string[];  // url link
-  created:       string;
-  edited:        string;
-  url:           string;
+  name:       string;
+  height:     string;
+  mass:       string;
+  hair_color: string;
+  skin_color: string;
+  eye_color:  string;
+  birth_year: string;
+  gender:     Gender;
+  homeworld:  string;
+  films:      string[];
+  species:    string[];
+  vehicles:   string[];
+  starships:  string[];
+  created:    string;
+  edited:     string;
+  url:        string;
+}
+
+export enum Gender {
+  Female = "female",
+  Male = "male",
+  NA = "n/a",
 }

@@ -1,12 +1,24 @@
 <button mat-button [matMenuTriggerFor]="appMenu">Swapi</button>
 
 <mat-menu #appMenu="matMenu">
-  <button mat-menu-item  routerLink="film" routerLinkActive="active"> this.endpoints.films  </button>
-  <button mat-menu-item  routerLink="planet" routerLinkActive="active">  this.endpoints.planets  </button>
-  <button mat-menu-item  routerLink="species" routerLinkActive="active">  this.endpoints.species  </button>
-  
-  <button mat-menu-item  routerLink="vehicle" routerLinkActive="active">  this.endpoints.vehicles  </button>
-  <button mat-menu-item  routerLink="people" routerLinkActive="active">  this.endpoints.people </button>
-  <button mat-menu-item  routerLink="starship" routerLinkActive="active">  this.endpoints.starships  </button>
+  <button mat-menu-item  routerLink="film" routerLinkActive="active"> {{ this.endPoints.films }} </button>
+  <button mat-menu-item  routerLink="planet" routerLinkActive="active"> {{ this.endPoints.planets }} </button>
+  <button mat-menu-item  routerLink="species" routerLinkActive="active"> {{ this.endPoints.species }} </button>
+  <button mat-menu-item  routerLink="vehicle" routerLinkActive="active"> {{ this.endPoints.vehicles }} </button>
+  <button mat-menu-item  routerLink="people" routerLinkActive="active"> {{ this.endPoints.people }} </button>
+  <button mat-menu-item  routerLink="starship" routerLinkActive="active"> {{ this.endPoints.starships }} </button>
 </mat-menu>
+
+<mat-toolbar>
+  <mat-toolbar-row>
+    <button mat-button  (click)="navTo('/starwar/film')">films</button>
+    <button mat-button  (click)="navTo('/starwar/planet')">planets</button>
+    <button mat-button  (click)="navTo('/starwar/people')">people</button>
+    <button mat-button  (click)="navTo('/starwar/starship')">starships</button>
+    <button mat-button  (click)="navTo('/starwar/vehicle')">vehicles</button>
+    <button mat-button  (click)="navTo('/starwar/species')">species</button>
+    <span fxFlex="100" fxLayoutAlign="center center"> {{ this.currentView  }} </span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
 <router-outlet></router-outlet>

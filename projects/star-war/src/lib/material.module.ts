@@ -36,6 +36,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [],
@@ -74,7 +75,8 @@ import { MatStepperModule } from '@angular/material/stepper';
     BidiModule,
     A11yModule,
     MatCommonModule,
-    ObserversModule
+    ObserversModule,
+    MatRadioModule
   ],
   exports: [
     MatAutocompleteModule,
@@ -111,7 +113,8 @@ import { MatStepperModule } from '@angular/material/stepper';
     BidiModule,
     A11yModule,
     MatCommonModule,
-    ObserversModule
+    ObserversModule,
+    MatRadioModule
   ]
 })
 export class MaterialModule { }

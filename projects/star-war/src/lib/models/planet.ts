@@ -1,13 +1,13 @@
 import { ISwapiResponse } from './swapi-response';
 
-export class PlannetResponse implements ISwapiResponse {
+export class PlanetResponse implements ISwapiResponse {
   count:    number;
   next:     string;
   previous: string;
   results:  any[];
 }
 
-export class Plannet {
+export class Planet {
   name:            string;
   rotation_period: string;
   orbital_period:  string;
