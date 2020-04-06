@@ -1,0 +1,53 @@
+<ngx-charts-line-chart
+  [view]="confirmedView"
+  [scheme]="confirmedColorScheme"
+  [legend]="legend"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [xAxis]="xAxis"
+  [yAxis]="yAxis"
+  [xAxisLabel]="xAxisLabel"
+  [yAxisLabel]="yAxisLabel"
+  [timeline]="timeline"
+  [results]="confirmedSeriesData"
+  (select)="onSelect($event)"
+  (activate)="onActivate($event)"
+  (deactivate)="onDeactivate($event)"
+  >
+</ngx-charts-line-chart>
+
+<ngx-charts-line-chart
+  [view]="deathView"
+  [scheme]="deathColorScheme"
+  [legend]="legend"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [xAxis]="xAxis"
+  [yAxis]="yAxis"
+  [xAxisLabel]="xAxisLabel"
+  [yAxisLabel]="yAxisLabel"
+  [timeline]="timeline"
+  [results]="deathSeriesData"
+  (select)="onSelect($event)"
+  (activate)="onActivate($event)"
+  (deactivate)="onDeactivate($event)"
+  >
+</ngx-charts-line-chart>
+
+<ngx-charts-line-chart
+  [view]="recoveredView"
+  [scheme]="recoveredColorScheme"
+  [legend]="legend"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [xAxis]="xAxis"
+  [yAxis]="yAxis"
+  [xAxisLabel]="xAxisLabel"
+  [yAxisLabel]="yAxisLabel"
+  [timeline]="timeline"
+  [results]="recoveredSeriesData"
+  (select)="onSelect($event)"
+  (activate)="onActivate($event)"
+  (deactivate)="onDeactivate($event)"
+  >
+</ngx-charts-line-chart>

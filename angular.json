@@ -202,6 +202,46 @@
           }
         }
       }
+    },
+    "covid19": {
+      "projectType": "library",
+      "root": "projects/covid19",
+      "sourceRoot": "projects/covid19/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/covid19/tsconfig.lib.json",
+            "project": "projects/covid19/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/covid19/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/covid19/src/test.ts",
+            "tsConfig": "projects/covid19/tsconfig.spec.json",
+            "karmaConfig": "projects/covid19/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/covid19/tsconfig.lib.json",
+              "projects/covid19/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ng-mat-latest"

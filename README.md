@@ -25,3 +25,7 @@ After that you should be able to execute tns commands.
 ## reference
 
 - [testing-angular-applications](https://github.com/testing-angular-applications/testing-angular-applications/tree/master/chapter06)
+
+## charts
+
+- [ngx-charts](https://github.com/swimlane/ngx-charts)

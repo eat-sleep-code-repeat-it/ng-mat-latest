@@ -29,6 +29,10 @@
         "dist/star-war",
         "dist/star-war/star-war",
         "dist/star-war"
+      ],
+      "covid19": [
+        "dist/covid19/covid19",
+        "dist/covid19"
       ]
     }
   },

@@ -11,6 +11,7 @@ import { DemoMaterialModule } from './modules/demo-material.module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { HttpErrorInterceptor } from './http-error.interceptor';
 import { StarWarModule } from 'projects/star-war/src/lib/star-war.module';
+import { Covid19Module } from 'projects/covid19/src/lib/covid19.module';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { StarWarModule } from 'projects/star-war/src/lib/star-war.module';
     DemoMaterialModule,
     FlexLayoutModule,
     HttpClientModule,
-    StarWarModule
+    StarWarModule,
+    Covid19Module
   ],
   /*
   providers: [
